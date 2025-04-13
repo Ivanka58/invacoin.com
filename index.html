@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InvaCoin - Криптовалюта для помощи животным</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* Общие стили */
         body {
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background: linear-gradient(to bottom, #f0ead6, #d0b8a8); /* Пастельный градиент */
             color: #333;
         }
 
         /* Шапка */
         header {
-            background-color: #fff;
+            background: linear-gradient(to bottom, #e8f5e9, #a5d6a7); /* Мягкий зеленый градиент */
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex; /* Добавляем flex контейнер */
+            justify-content: space-between; /* Распределяем элементы по краям */
+            align-items: center; /* Выравниваем элементы по вертикали */
         }
 
         header h1 {
@@ -119,12 +123,72 @@
         form input[type="submit"]:hover {
             background-color: #00796b;
         }
+
+        /* Бургер меню */
+        .hamburger-menu {
+            display: none; /* Скрываем иконку меню по умолчанию */
+            font-size: 2em;
+            color: #26a69a;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: none; /* Скрываем меню по умолчанию */
+            position: absolute;
+            top: 100%; /* Размещаем под шапкой */
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10; /* Чтобы меню было над другими элементами */
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-bottom: 5px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 5px 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Скрываем основную навигацию */
+            }
+
+            .hamburger-menu {
+                display: block; /* Показываем иконку меню */
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>InvaCoin</h1>
+        <div class="hamburger-menu">&#9776;</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#login">Войти</a></li>
+                <li><a href="#register">Зарегистрироваться</a></li>
+            </ul>
+        </nav>
     </header>
 
     <nav>
@@ -136,8 +200,6 @@
             <li><a href="#team">Команда</a></li>
             <li><a href="#contact">Контакты</a></li>
             <li><a href="#donate">Поддержка разработчика</a></li>
-            <li><a href="#login">Войти</a></li>
-            <li><a href="#register">Зарегистрироваться</a></li>
         </ul>
     </nav>
 
@@ -152,7 +214,8 @@
             <h2>Особенности InvaCoin</h2>
             <ul>
                 <li>Поддержка благотворительности: Часть каждой транзакции направляется в благотворительный фонд, проверенный и отобранный нашим сообществом.</li>
-                <li>Прозрачность: Все транзакции записываются в блокчейн Ethereum, что обеспечивает полную прозрачность и невозможности подделки.</li>
+                <li>Прозрачность: Все транзакции записываются в блокчейн Ethereum, что обеспечивает полную прозрачность и невозмож
+ности подделки.</li>
                 <li>Децентрализация: InvaCoin - это децентрализованная криптовалюта, не контролируемая ни одним органом, что гарантирует ее независимость и устойчивость.</li>
                 <li>Сообщество: Активное и вовлеченное сообщество, которое поддерживает развитие проекта, участвует в принятии решений и помогает нам делать мир лучше.</li>
             </ul>
@@ -172,8 +235,7 @@
                 <li>Этап 1: Запуск токена InvaCoin и создание базовой инфраструктуры.</li>
                 <li>Этап 2: Листинг на децентрализованных биржах и расширение сообщества.</li>
                 <li>Этап 3: Привлечение партнеров из сферы благотворительности и запуск партнерской программы.</li>
-                <li>Этап 4: Разработка мобильного приложения дл
-я удобного использования InvaCoin и отслеживания благотворительных взносов.</li>
+                <li>Этап 4: Разработка мобильного приложения для удобного использования InvaCoin и отслеживания благотворительных взносов.</li>
                 <li>Этап 5: Создание собственной платформы для пожертвований и финансирования проектов, связанных с помощью животным.</li>
             </ol>
             <p>Мы постоянно работаем над достижением наших целей и будем держать вас в курсе всех новостей и обновлений.</p>
@@ -206,7 +268,8 @@
         </section>
 
         <section id="login">
-            <h2>Войти</h2>
+            <h2>В
+ойти</h2>
             <form>
                 <label for="login-email">Email:</label><br>
                 <input type="email" id="login-email" name="login-email"><br><br>
@@ -232,6 +295,15 @@
     <footer>
         &copy; 2024 InvaCoin. Все права защищены.
     </footer>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const menu = document.querySelector('.menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 
 </body>
 </html>
