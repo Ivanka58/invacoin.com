@@ -21,9 +21,9 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex; /* Добавляем flex контейнер */
-            justify-content: space-between; /* Распределяем элементы по краям */
-            align-items: center; /* Выравниваем элементы по вертикали */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
@@ -126,23 +126,23 @@
 
         /* Бургер меню */
         .hamburger-menu {
-            display: none; /* Скрываем иконку меню по умолчанию */
+            display: none;
             font-size: 2em;
             color: #26a69a;
             cursor: pointer;
         }
 
         .menu {
-            display: none; /* Скрываем меню по умолчанию */
+            display: none;
             position: absolute;
-            top: 100%; /* Размещаем под шапкой */
+            top: 100%;
             right: 0;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 10; /* Чтобы меню было над другими элементами */
+            z-index: 10;
         }
 
         .menu ul {
@@ -169,11 +169,11 @@
         /* Адаптивность */
         @media (max-width: 768px) {
             nav {
-                display: none; /* Скрываем основную навигацию */
+                display: none;
             }
 
             .hamburger-menu {
-                display: block; /* Показываем иконку меню */
+                display: block;
             }
         }
     </style>
@@ -185,8 +185,8 @@
         <div class="hamburger-menu">&#9776;</div>
         <nav class="menu">
             <ul>
-                <li><a href="#login">Войти</a></li>
-                <li><a href="#register">Зарегистрироваться</a></li>
+                <li><a href="#login-section">Войти</a></li>
+                <li><a href="#register-section">Зарегистрироваться</a></li>
             </ul>
         </nav>
     </header>
@@ -214,10 +214,10 @@
             <h2>Особенности InvaCoin</h2>
             <ul>
                 <li>Поддержка благотворительности: Часть каждой транзакции направляется в благотворительный фонд, проверенный и отобранный нашим сообществом.</li>
-                <li>Прозрачность: Все транзакции записываются в блокчейн Ethereum, что обеспечивает полную прозрачность и невозмож
-ности подделки.</li>
+                <li>Прозрачность: Все транзакции записываются в блокчейн Ethereum, что обеспечивает полную прозрачность и невозможности подделки.</li>
                 <li>Децентрализация: InvaCoin - это децентрализованная криптовалюта, не контролируемая ни одним органом, что гарантирует ее независимость и устойчивость.</li>
-                <li>Сообщество: Активное и вовлеченное сообщество, которое поддерживает развитие проекта, участвует в принятии решений и помогает нам делать мир лучше.</li>
+                <li>Сообщество: Активное и вовлеченное сообщество, которое по
+ддерживает развитие проекта, участвует в принятии решений и помогает нам делать мир лучше.</li>
             </ul>
             <p>Мы постоянно работаем над улучшением InvaCoin и добавлением новых функций, чтобы сделать его еще более полезным и удобным для всех участников.</p>
         </section>
@@ -267,19 +267,18 @@
             <p>все переводы полностью пойдут в развитие IVC токена</p>
         </section>
 
-        <section id="login">
-            <h2>В
-ойти</h2>
+        <section id="login-section">
+            <h2>Войти</h2>
             <form>
                 <label for="login-email">Email:</label><br>
                 <input type="email" id="login-email" name="login-email"><br><br>
                 <label for="login-password">Пароль:</label><br>
-                <input type="password" id="login-password" name="login-password"><br><br>
+<input type="password" id="login-password" name="login-password"><br><br>
                 <input type="submit" value="Войти">
             </form>
         </section>
 
-        <section id="register">
+        <section id="register-section">
             <h2>Зарегистрироваться</h2>
             <button>Зарегистрироваться через ВК</button><br><br>
             <label for="register-email">Email:</label><br>
