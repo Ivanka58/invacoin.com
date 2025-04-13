@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvaCoin - Криптовалюта для помощи животным</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0ead6, #d0b8a8);
+            color: #333;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(to bottom, #e8f5e9, #a5d6a7);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #26a69a;
+        }
+
+        /* Навигация */
+        nav {
+            background-color: #26a69a;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        nav li a:hover {
+            background-color: #00796b;
+        }
+
+        /* Основной контент */
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* Скрываем все секции по умолчанию */
+        }
+
+        section h2 {
+            font-size: 1.5em;
+            color: #26a69a;
+            margin-top: 0;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Ссылки */
+        a {
+            color: #26a69a;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Формы */
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="email"],
+        form input[type="password"],
+        form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #26a69a;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #00796b;
+        }
+
+        /* Бургер меню */
+        .hamburger-menu {
+            display: none;
+            font-size: 2em;
+            color: #26a69a;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-bottom: 5px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 5px 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+        }
+
+        /* Секции "Войти" и "Зарегистрироваться" */
+        #login-section,
+        #register-section {
+            display: none; /* Скрываем эти секции изначально */
+        }
+
+        /* Показываем секцию "О нас" по умолчанию */
+        #about {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>InvaCoin</h1>
+        <div class="hamburger-menu">&#9776;</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#login-section">Войти</a></li>
+                <li><a href="#register-section">Зарегистрироваться</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#features">Особенности</a></li>
+            <li><a href="#charity">Благотворительность</a></li>
+            <li><a href="#roadmap">Дорожная карта</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#donate">Поддержка разработчика</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>О нас</h2>
+            <p>InvaCoin - это криптовалюта, созданная с душой и сердцем, чтобы поддерживать благотворительные организации, занимающиеся помощью животным. Мы верим, что каждый питомец заслуживает любящий дом и достойный уход. Наша цель - создать устойчивую финансовую систему, которая позволит оказывать помощь нуждающимся животным по всему миру, от крошечных котят до величественных лошадей.</p>
+            <p>Мы используем блокчейн Ethereum для обеспечения прозрачности и безопасности всех транзакций. Каждый InvaCoin - это вклад в лучшее будущее для животных, которые не могут говорить за себя.</p>
+        </section>
+
+        <section id="features">
+            <h2>Особенности InvaCoin</h2>
+            <ul>
+                <li>Поддержка благотворительности: Часть каждой транзакции направляется в благотворительный фонд, проверенный и отобранный нашим сообществом.</li>
+                <li>Прозрачность: Все транзакции записываются в блокчейн Ethereum, что обеспечивает полную прозрачность и невозможности подделки.</li>
+                <li>Децентрализация: InvaCoin - это деце
+нтрализованная криптовалюта, не контролируемая ни одним органом, что гарантирует ее независимость и устойчивость.</li>
+                <li>Сообщество: Активное и вовлеченное сообщество, которое поддерживает развитие проекта, участвует в принятии решений и помогает нам делать мир лучше.</li>
+            </ul>
+            <p>Мы постоянно работаем над улучшением InvaCoin и добавлением новых функций, чтобы сделать его еще более полезным и удобным для всех участников.</p>
+        </section>
+
+        <section id="charity">
+            <h2>Благотворительность</h2>
+            <p>Мы сотрудничаем с различными фондами, занимающимися помощью бездомным животным по всему миру. Наша цель - создать широкую сеть партнеров, чтобы обеспечить максимальную поддержку нуждающимся животным, независимо от их местонахождения.</p>
+            <p>В ближайшее время мы опубликуем список всех наших партнеров с указанием их контактных данных и адресов криптокошельков для пожертвований. Мы также будем регулярно публиковать отчеты о том, как используются средства, полученные от InvaCoin, чтобы вы могли видеть, как ваш вклад помогает животным.</p>
+            <p>Вы можете помочь нам в нашей миссии, просто используя InvaCoin для транзакций или напрямую жертвуя в наши партнерские фонды. Вместе мы можем сделать этот мир лучше для животных!</p>
+        </section>
+
+        <section id="roadmap">
+            <h2>Дорожная карта</h2>
+            <ol>
+                <li>Этап 1: Запуск токена InvaCoin и создание базовой инфраструктуры.</li>
+                <li>Этап 2: Листинг на децентрализованных биржах и расширение сообщества.</li>
+                <li>Этап 3: Привлечение партнеров из сферы благотворительности и запуск партнерской программы.</li>
+                <li>Этап 4: Разработка мобильного приложения для удобного использования InvaCoin и отслеживания благотворительных взносов.</li>
+                <li>Этап 5: Создание собственной платформы для пожертвований и финансирования проектов, связанных с помощью животным.</li>
+            </ol>
+            <p>Мы постоянно работаем над достижением наших целей и будем держать вас в курсе всех новостей и обновлений.</p>
+        </section>
+
+        <section id="team">
+            <h2>Команда</h2>
+            <p>Команда InvaCoin состоит из опытных разработчиков, маркетологов и экспертов в области благотворительности, объединенных общей целью - помочь животным. Мы посвящены нашему делу и постоянно работаем над улучшением InvaCoin.</p>
+            <p>Мы верим в прозрачность и открытость, поэтому будем регулярно делиться информацией о нашей деятельности и планах на будущее.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами, чтобы узнать больше о InvaCoin и о том, как вы можете помочь:</p>
+            <p>Email: <a href="mailto:invacoin0official@gmail.com">invacoin0official@gmail.com</a></p>
+            <p>Telegram: <a href="https://t.me/invacoin_official">t.me/invacoin_official</a></p>
+            <p>Twitter: <a href="https://twitter.com/InvaCoinOfficial">@InvaCoinOfficial</a></p>
+        </section>
+
+        <section id="donate">
+            <h2>Поддержка разработчика</h2>
+            <p>Если вы вдруг захотели поддержать разработчика валюты, вы можете перевести для него любую сумму.</p>
+            <p>Номер телефона: (скоро)</p>
+            <p>Криптокошелек: (скоро)</p>
+            <p>Любая сумма очень важна в процессе разработки токена.</p>
+            <p>*вы не обязаны делать денежные переводы владельцу валюты.</p>
+            <p>все переводы осуществляется добровольно</p>
+            <p>возврата денежных переводов не существует</p>
+            <p>все переводы полностью пойдут в развитие IVC токена</p>
+        </section>
+
+        <section id="login-section">
+            <h2>Войти</h2>
+            <form>
+                <label for="login-emai
+l">Email:</label><br>
+                <input type="email" id="login-email" name="login-email"><br><br>
+                <label for="login-password">Пароль:</label><br>
+                <input type="password" id="login-password" name="login-password"><br><br>
+                <input type="submit" value="Войти">
+            </form>
+        </section>
+
+        <section id="register-section">
+            <h2>Зарегистрироваться</h2>
+            <button>Зарегистрироваться через ВК</button><br><br>
+            <label for="register-email">Email:</label><br>
+            <input type="email" id="register-email" name="register-email"><br><br>
+            <label for="register-phone">Номер телефона:</label><br>
+            <input type="tel" id="register-phone" name="register-phone"><br><br>
+            <label for="register-password">Пароль:</label><br>
+            <input type="password" id="register-password" name="register-password"><br><br>
+            <input type="submit" value="Зарегистрироваться">
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 InvaCoin. Все права защищены.
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const menu = document.querySelector('.menu');
+        const sections = document.querySelectorAll('section');
+
+        hamburgerMenu.addEventListener('click', () => {
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        menu.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                event.preventDefault();
+                const targetSectionId = event.target.getAttribute('href').substring(1);
+
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                const targetSection = document.getElementById(targetSectionId);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+
+                menu.style.display = 'none';
+            }
+        });
+
+         // Показываем секцию "О нас" по умолчанию
+        document.getElementById('about').style.display = 'block';
+    </script>
+
+</body>
+</html>
