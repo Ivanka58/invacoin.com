@@ -4,7 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InvaCoin - Криптовалюта для помощи животным</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #26a69a;
+        }
+
+        /* Навигация */
+        nav {
+            background-color: #26a69a;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        nav li a:hover {
+            background-color: #00796b;
+        }
+
+        /* Основной контент */
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.5em;
+            color: #26a69a;
+            margin-top: 0;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Ссылки */
+        a {
+            color: #26a69a;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Формы */
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="email"],
+        form input[type="password"],
+        form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #26a69a;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #00796b;
+        }
+    </style>
 </head>
 <body>
 
@@ -37,7 +152,7 @@
             <h2>Особенности InvaCoin</h2>
             <ul>
                 <li>Поддержка благотворительности: Часть каждой транзакции направляется в благотворительный фонд, проверенный и отобранный нашим сообществом.</li>
-                <li>Прозрачность: Все транзакции записываются в блокчейн Ethereum, что обеспечивает полную прозрачность и невозможность подделки.</li>
+                <li>Прозрачность: Все транзакции записываются в блокчейн Ethereum, что обеспечивает полную прозрачность и невозможности подделки.</li>
                 <li>Децентрализация: InvaCoin - это децентрализованная криптовалюта, не контролируемая ни одним органом, что гарантирует ее независимость и устойчивость.</li>
                 <li>Сообщество: Активное и вовлеченное сообщество, которое поддерживает развитие проекта, участвует в принятии решений и помогает нам делать мир лучше.</li>
             </ul>
@@ -57,7 +172,8 @@
                 <li>Этап 1: Запуск токена InvaCoin и создание базовой инфраструктуры.</li>
                 <li>Этап 2: Листинг на децентрализованных биржах и расширение сообщества.</li>
                 <li>Этап 3: Привлечение партнеров из сферы благотворительности и запуск партнерской программы.</li>
-                <li>Этап 4: Разработка мобильного приложения для удобного использования InvaCoin и отслеживания благотворительных взносов.</li>
+                <li>Этап 4: Разработка мобильного приложения дл
+я удобного использования InvaCoin и отслеживания благотворительных взносов.</li>
                 <li>Этап 5: Создание собственной платформы для пожертвований и финансирования проектов, связанных с помощью животным.</li>
             </ol>
             <p>Мы постоянно работаем над достижением наших целей и будем держать вас в курсе всех новостей и обновлений.</p>
@@ -96,8 +212,7 @@
                 <input type="email" id="login-email" name="login-email"><br><br>
                 <label for="login-password">Пароль:</label><br>
                 <input type="password" id="login-password" name="login-password"><br><br>
-                <
-input type="submit" value="Войти">
+                <input type="submit" value="Войти">
             </form>
         </section>
 
@@ -120,118 +235,3 @@ input type="submit" value="Войти">
 
 </body>
 </html>
-style.css:
-/* Общие стили */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Шапка */
-header {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #26a69a;
-}
-
-/* Навигация */
-nav {
-    background-color: #26a69a;
-    color: #fff;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-}
-
-nav li a:hover {
-    background-color: #00796b;
-}
-
-/* Основной контент */
-main {
-    padding: 20px;
-}
-
-section {
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 1.5em;
-    color: #26a69a;
-    margin-top: 0;
-}
-
-/* Подвал */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Ссылки */
-a {
-    color: #26a69a;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Формы */
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input[type="email"],
-form input[type="password"],
-form input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form input[type="submit"] {
-    background-color: #26a69a;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #00796b;
-}
